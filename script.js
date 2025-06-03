@@ -4,6 +4,24 @@ document.addEventListener('DOMContentLoaded', () => {
   const regionMenu    = document.getElementById('region-menu');
   const countryList   = document.getElementById('country-list');
 
+  const toggleTheme = document.getElementById('toggle-theme');
+  const body = document.body;
+  const icon = toggleTheme.querySelector('i');
+  const label = toggleTheme.querySelector('span');
+
+  toggleTheme.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    const isDark = body.classList.contains('dark-mode');
+    icon.className = isDark ? 'fa-solid fa-sun' : 'far fa-moon';
+    label.textContent = isDark ? 'Light Mode' : 'Dark Mode';
+  });
+
+  const backBtn = document.getElementById('back-btn');
+  if (backBtn) {
+    backBtn.addEventListener('click', () => window.history.back());
+  }
+
+
   let allCountries = [];
   let currentRegion = 'All';
 

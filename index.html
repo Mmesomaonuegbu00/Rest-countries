@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REST Countries</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-top">
+            <p>Where in the world</p>
+            <div class="dark" id="toggle-theme">
+                <i class="far fa-moon"></i>
+                <span>Dark Mode</span>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="main-top">
+            <div class="search-wrapper">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input id="search" type="text" placeholder="Search for a country" />
+            </div>
+
+            <div class="filter-wrapper">
+                <button id="filter-toggle" class="filter">
+                    Filter by Region
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <ul id="region-menu" class="region-menu"></ul>
+            </div>
+        </div>
+
+        <div id="country-list" class="country-list"></div>
+
+
+
+     
+
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
